@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jana Nayagan | Official Trailer</title>
+    <style>
+        /* Professional Cinematic Theme */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000000; /* Pure black */
+            color: #ffffff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; /* Removes scrollbars for a clean look */
+        }
+
+        h1 {
+            margin-bottom: 25px;
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 1.8rem;
+            color: #e0e0e0;
+        }
+
+        /* The Video Container - Forces 16:9 Aspect Ratio */
+        .video-container {
+            position: relative;
+            width: 90%;
+            max-width: 1100px;
+            aspect-ratio: 16 / 9; 
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+            border: 1px solid #222;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .footer {
+            margin-top: 25px;
+            color: #444;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Jana Nayagan</h1>
+
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/watch?v=HAxm8n9QY50" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <p class="footer">OFFICIAL TRAILER | 2024</p>
+
+</body>
+</html>
