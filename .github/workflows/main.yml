@@ -1,0 +1,26 @@
+name: Azure_Deploy_Pipeline
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📦 Get Code From GitHub
+        uses: actions/checkout@v3
+
+      - name: 🚀 Sync to Azure
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          security: loose
+          local-dir: ./
+          server-dir: /site/wwwroot/
+          state-name: .ftp-deploy-sync-state.json
+          log-level: verbose
